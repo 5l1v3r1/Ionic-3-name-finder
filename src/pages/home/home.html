@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Ionic!</h2>
+   <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <form (ngSubmit)="getData()">
+            <ion-item>
+              <ion-label fixed>
+                Phone
+              </ion-label>
+              <ion-input [(ngModel)]="phone" name="phone" type="text"></ion-input>
+            </ion-item>
+            <button ion-button type="submit" block>Submit</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+   <ion-list inset>
+    <ion-item >
+      <h2>{{name}}</h2>
+      <h2>{{Mobile}}</h2>
+      <h2>{{provider}}</h2>
+      <h2>{{state}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
