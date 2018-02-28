@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-
+import 'rxjs/add/operator/map';
 /*
   Generated class for the PhoneProvider provider.
 
@@ -11,18 +11,13 @@ import { Injectable } from '@angular/core';
 export class PhoneProvider {
    url;
    ph:string;
-  constructor(public http: HttpClient) {
+  constructor(public http: Http) {
     console.log('Hello PhoneProvider Provider');
     this.ph=
      this.url = 'http://localhost:8100/api/';
   }
-getDetails(ph) {
-  return new Promise(resolve => {
-    this.http.get(this.url+ph).subscribe(data => {
-      resolve(data);
-    }, err => {
-      console.log(err);
-    });
-  });
-}
+  getDetails(ph){
+     return this.http.get(this.url+ph)
+       .map(res => res.json());
+ }
 }

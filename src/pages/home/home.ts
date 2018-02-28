@@ -6,21 +6,21 @@ import { PhoneProvider } from '../../providers/phone/phone';
   templateUrl: 'home.html'
 })
 export class HomePage {
-     name: string;
-     mobile:string;
-     provider: string;
-     state: string;
-     phone='';
+     name: string =' ';
+     mobile:string=' ';
+     provider: string=' ';
+     state: string=' ';
+     phone='7708545125';
    constructor(public navCtrl: NavController, public phoneProvider: PhoneProvider) {
 
   }
 
-  getData() {
-    this.phoneProvider.getDetails(this.phone).then(data => {
-      this.name = data.result.name;
-      this.mobile = data.result.mobile;
-      this.provider = data.result.provider;
-      this.state = data.result.state;
-    });
+   getData() {
+     this.phoneProvider.getDetails(this.phone).subscribe(data => {
+        this.name=data.result.name;
+        this.mobile=data.result.mobile;
+        this.provider=data.result.provider;
+        this.state=data.result.state;
+});
   }
 }
