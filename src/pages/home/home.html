@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>Welcome to Name Finder!</h2>
    <ion-grid>
     <ion-row>
       <ion-col width-100>
@@ -17,19 +17,32 @@
               </ion-label>
               <ion-input [(ngModel)]="phone" name="phone" type="text"></ion-input>
             </ion-item>
-            <button ion-button type="submit" block>Submit</button>
+            <button ion-button type="submit" block>Find</button>
           </form>
         </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-   <ion-list inset>
+   <ion-list inset >
     <ion-item >
-      <h2>{{name}}</h2>
-      <h2>{{Mobile}}</h2>
-      <h2>{{provider}}</h2>
-      <h2>{{state}}</h2>
+       <ion-icon name="person"></ion-icon>
+      <h2 text-center>{{name}}</h2>
+
+    </ion-item>
+    <ion-item >
+ <ion-icon name="phone-portrait"></ion-icon>
+      <h2 text-center>{{mobile}}</h2>
+
+    </ion-item>
+    <ion-item >
+<ion-icon name="cloud"></ion-icon>
+      <h2 text-center>{{provider}}</h2>
+
+    </ion-item>
+    <ion-item>
+       <ion-icon name="square"></ion-icon>
+        <h2 text-center>{{state}}</h2>
     </ion-item>
   </ion-list>
 </ion-content>
