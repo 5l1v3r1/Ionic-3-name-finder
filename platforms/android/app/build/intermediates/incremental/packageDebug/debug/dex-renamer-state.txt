@@ -1,0 +1,4 @@
+#Wed Feb 28 18:42:18 EST 2018
+base.0=/home/abu/ionic/Ionic-3-name-finder/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/home/abu/ionic/Ionic-3-name-finder/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

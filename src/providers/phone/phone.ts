@@ -14,7 +14,7 @@ export class PhoneProvider {
   constructor(public http: Http) {
     console.log('Hello PhoneProvider Provider');
     this.ph=
-     this.url = 'http://localhost:8100/api/';
+     this.url = 'http://abutech.pythonanywhere.com/name/';
   }
   getDetails(ph){
      return this.http.get(this.url+ph)
