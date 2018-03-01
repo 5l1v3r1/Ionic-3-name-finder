@@ -6,12 +6,14 @@ import { PhoneProvider } from '../../providers/phone/phone';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
      name: string =' ';
      mobile:string=' ';
      provider: string=' ';
      state: string=' ';
      phone='7708545125';
+     show: boolean = false;
    constructor(public navCtrl: NavController, public phoneProvider: PhoneProvider,public loadingCtrl: LoadingController) {
 
   }
@@ -27,9 +29,11 @@ export class HomePage {
         this.mobile=data.result.mobile;
         this.provider=data.result.provider;
         this.state=data.result.state;
+        this.show=true;
 });
 if(this.name!=null)
   loader.dismiss();
   }
 
 }
+

@@ -174,6 +174,7 @@ var HomePage = (function () {
         this.provider = ' ';
         this.state = ' ';
         this.phone = '7708545125';
+        this.show = false;
     }
     HomePage.prototype.getData = function () {
         var _this = this;
@@ -186,13 +187,14 @@ var HomePage = (function () {
             _this.mobile = data.result.mobile;
             _this.provider = data.result.provider;
             _this.state = data.result.state;
+            _this.show = true;
         });
         if (this.name != null)
             loader.dismiss();
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Name Finder!</h2>\n   <ion-grid>\n    <ion-row>\n      <ion-col width-100>\n        <ion-list>\n          <form (ngSubmit)="getData()">\n            <ion-item>\n              <ion-label fixed>\n                Phone\n              </ion-label>\n              <ion-input [(ngModel)]="phone" name="phone" type="text"></ion-input>\n            </ion-item>\n            <button ion-button type="submit" block>Find</button>\n          </form>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-list inset >\n   <ion-item >\n      <ion-icon name="person"></ion-icon>\n     <h2 text-center>{{name}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="phone-portrait"></ion-icon>\n     <h2 text-center>{{mobile}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="cloud"></ion-icon>\n     <h2 text-center>{{provider}}</h2>\n\n   </ion-item>\n   <ion-item>\n      <ion-icon name="square"></ion-icon>\n       <h2 text-center>{{state}}</h2>\n   </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Name Finder!</h2>\n   <ion-grid>\n    <ion-row>\n      <ion-col width-100>\n        <ion-list>\n          <form (ngSubmit)="getData()">\n            <ion-item>\n              <ion-label fixed>\n                Phone\n              </ion-label>\n              <ion-input [(ngModel)]="phone" name="phone" type="text"></ion-input>\n            </ion-item>\n            <button ion-button type="submit" block >Find</button>\n          </form>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-list inset *ngIf="show">\n   <ion-item >\n      <ion-icon name="person"></ion-icon>\n     <h2 text-center>{{name}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="phone-portrait"></ion-icon>\n     <h2 text-center>{{mobile}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="cloud"></ion-icon>\n     <h2 text-center>{{provider}}</h2>\n\n   </ion-item>\n   <ion-item>\n      <ion-icon name="square"></ion-icon>\n       <h2 text-center>{{state}}</h2>\n   </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_phone_phone__["a" /* PhoneProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_phone_phone__["a" /* PhoneProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]) === "function" && _c || Object])
     ], HomePage);
@@ -244,10 +246,9 @@ var PhoneProvider = (function () {
     };
     PhoneProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]])
     ], PhoneProvider);
     return PhoneProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=phone.js.map

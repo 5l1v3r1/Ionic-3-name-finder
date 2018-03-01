@@ -17,13 +17,13 @@
               </ion-label>
               <ion-input [(ngModel)]="phone" name="phone" type="text"></ion-input>
             </ion-item>
-            <button ion-button type="submit" block>Find</button>
+            <button ion-button type="submit" block >Find</button>
           </form>
         </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-list inset >
+  <ion-list inset *ngIf="show">
    <ion-item >
       <ion-icon name="person"></ion-icon>
      <h2 text-center>{{name}}</h2>
