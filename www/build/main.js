@@ -63,7 +63,7 @@ var TabsPage = (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/abu/ionic/Ionic-3-name-finder/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/abu/ionic/Ionic-3-name-finder/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -98,9 +98,9 @@ var AboutPage = (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/home/abu/ionic/Ionic-3-name-finder/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid>\n     <ion-row>\n       <ion-col width-100>\n         <ion-list>\n           <ion-item>\n             <strong>App Name: </strong> Name Finder\n           </ion-item>\n           <ion-item>\n             <strong>Version: </strong> 1.0.0\n           </ion-item>\n           <ion-item>\n             <strong>Description: </strong> Name finder app for indian mobile numbers\n           </ion-item>\n         </ion-list>\n       </ion-col>\n     </ion-row>\n </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/home/abu/ionic/Ionic-3-name-finder/src/pages/about/about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid>\n     <ion-row>\n       <ion-col width-100>\n         <ion-list>\n           <ion-item>\n             <strong>App Name: </strong> Name Finder\n           </ion-item>\n           <ion-item>\n             <strong>Version: </strong> 1.0.0\n           </ion-item>\n           <ion-item>\n             <strong>Description: </strong> Name finder app for indian mobile numbers\n           </ion-item>\n         </ion-list>\n       </ion-col>\n     </ion-row>\n </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/about/about.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], AboutPage);
     return AboutPage;
 }());
@@ -133,9 +133,9 @@ var ContactPage = (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/home/abu/ionic/Ionic-3-name-finder/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="twitter" item-start></ion-icon>\n      @tutspy\n    </ion-item>\n    <ion-item>\n <ion-icon name="github" item-start></ion-icon>\n  http://github.com/abuvanth\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/abu/ionic/Ionic-3-name-finder/src/pages/contact/contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="twitter" item-start></ion-icon>\n      @tutspy\n    </ion-item>\n    <ion-item>\n <ion-icon name="github" item-start></ion-icon>\n  http://github.com/abuvanth\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/contact/contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], ContactPage);
     return ContactPage;
 }());
@@ -165,9 +165,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomePage = (function () {
-    function HomePage(navCtrl, phoneProvider) {
+    function HomePage(navCtrl, phoneProvider, loadingCtrl) {
         this.navCtrl = navCtrl;
         this.phoneProvider = phoneProvider;
+        this.loadingCtrl = loadingCtrl;
         this.name = ' ';
         this.mobile = ' ';
         this.provider = ' ';
@@ -176,20 +177,27 @@ var HomePage = (function () {
     }
     HomePage.prototype.getData = function () {
         var _this = this;
+        var loader = this.loadingCtrl.create({
+            content: "Please wait...",
+        });
+        loader.present();
         this.phoneProvider.getDetails(this.phone).subscribe(function (data) {
             _this.name = data.result.name;
             _this.mobile = data.result.mobile;
             _this.provider = data.result.provider;
             _this.state = data.result.state;
         });
+        if (this.name != null)
+            loader.dismiss();
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/abu/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Name Finder!</h2>\n   <ion-grid>\n    <ion-row>\n      <ion-col width-100>\n        <ion-list>\n          <form (ngSubmit)="getData()">\n            <ion-item>\n              <ion-label fixed>\n                Phone\n              </ion-label>\n              <ion-input [(ngModel)]="phone" name="phone" type="text"></ion-input>\n            </ion-item>\n            <button ion-button type="submit" block>Find</button>\n          </form>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-list inset >\n   <ion-item >\n      <ion-icon name="person"></ion-icon>\n     <h2 text-center>{{name}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="phone-portrait"></ion-icon>\n     <h2 text-center>{{mobile}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="cloud"></ion-icon>\n     <h2 text-center>{{provider}}</h2>\n\n   </ion-item>\n   <ion-item>\n      <ion-icon name="square"></ion-icon>\n       <h2 text-center>{{state}}</h2>\n   </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/abu/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Name Finder!</h2>\n   <ion-grid>\n    <ion-row>\n      <ion-col width-100>\n        <ion-list>\n          <form (ngSubmit)="getData()">\n            <ion-item>\n              <ion-label fixed>\n                Phone\n              </ion-label>\n              <ion-input [(ngModel)]="phone" name="phone" type="text"></ion-input>\n            </ion-item>\n            <button ion-button type="submit" block>Find</button>\n          </form>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <ion-list inset >\n   <ion-item >\n      <ion-icon name="person"></ion-icon>\n     <h2 text-center>{{name}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="phone-portrait"></ion-icon>\n     <h2 text-center>{{mobile}}</h2>\n\n   </ion-item>\n   <ion-item >\n  <ion-icon name="cloud"></ion-icon>\n     <h2 text-center>{{provider}}</h2>\n\n   </ion-item>\n   <ion-item>\n      <ion-icon name="square"></ion-icon>\n       <h2 text-center>{{state}}</h2>\n   </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_phone_phone__["a" /* PhoneProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_phone_phone__["a" /* PhoneProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_phone_phone__["a" /* PhoneProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]) === "function" && _c || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -228,7 +236,7 @@ var PhoneProvider = (function () {
         this.http = http;
         console.log('Hello PhoneProvider Provider');
         this.ph =
-            this.url = 'http://abutech.pythonanywhere.com/name/';
+            this.url = 'http://localhost:8100/api/';
     }
     PhoneProvider.prototype.getDetails = function (ph) {
         return this.http.get(this.url + ph)
@@ -236,9 +244,10 @@ var PhoneProvider = (function () {
     };
     PhoneProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
     ], PhoneProvider);
     return PhoneProvider;
+    var _a;
 }());
 
 //# sourceMappingURL=phone.js.map
@@ -371,9 +380,9 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/abu/ionic/Ionic-3-name-finder/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/abu/ionic/Ionic-3-name-finder/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/syed/mydoc/ionic/Ionic-3-name-finder/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
