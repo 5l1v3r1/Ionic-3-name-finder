@@ -14,7 +14,7 @@ export class PhoneProvider {
   constructor(public http: Http) {
     console.log('Hello PhoneProvider Provider');
     this.ph=
-     this.url = 'http://localhost:8100/api/';
+     this.url = 'http://localhost:8100/api/'; //replace url with http:abutech.pythonanywhere.com/name/ when build apk
   }
   getDetails(ph){
      return this.http.get(this.url+ph)
