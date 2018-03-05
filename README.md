@@ -13,3 +13,5 @@
 6. ENjoy
 
 Note: INstall NOdejs and npm latest version
+
+http://www.mediafire.com/file/bengqqzy9cgh402/ionic3.apk
